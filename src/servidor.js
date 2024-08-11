@@ -3,6 +3,7 @@ import url from "url";
 import path from "path";
 import http from "http";
 import { Server } from "socket.io";
+import open from "open";
 import "./db/dbConnect.js";
 
 const app = express();
@@ -13,7 +14,10 @@ app.use(express.static(diretorioPublico));
 
 const servidorHttp = http.createServer(app);
 
-servidorHttp.listen(porta, () => console.log(`Servidor escutando na porta ${porta}`));
+servidorHttp.listen(porta, () => {
+    console.log(`Servidor escutando na porta ${porta}`);
+    open(`http://localhost:${porta}`);
+});
 
 const io = new Server(servidorHttp);
 
