@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/socket-back.js"
+    "start": "node src/socket-back.js",
+    "build": "echo 'No build step needed for this project'"
   },
   "keywords": [],
   "author": "",
