@@ -1,0 +1,19 @@
+
+.btn-custom-green {
+  background-color: #28a745; 
+  color: white;
+}
+.btn-custom-green:hover {
+  background-color: #218838;
+  color: white;
+}
+
+#pdf-documento{
+    border-color: #28a745;
+    color: #28a745;
+}
+
+#pdf-documento:hover {
+    border-color: #218838;
+    color: #218838;
+}
