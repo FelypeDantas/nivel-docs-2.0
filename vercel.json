@@ -4,19 +4,20 @@
     {
       "src": "src/socket-back.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "dest": "/src/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
     }
-  ],
-  "functions": {
-    "src/socket-back.js": {
-      "maxDuration": 10
-    }
-  }
+  ]
 }
-
-  
